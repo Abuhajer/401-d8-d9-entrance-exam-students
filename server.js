@@ -137,3 +137,8 @@ function Character(data) {
 client.connect().then(() => {
   app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
 }).catch(error => console.log(`Could not connect to database\n${error}`));
+
+
+app.use('*',(req,res)=>{
+  res.status(404).send('Page Not Found 404');
+});
