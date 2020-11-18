@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../layout/head.html')%>
+
+</head>
+
+<body>
+
+    <header>
+           <%- include ('../layout/header.html')%>
+
+    </header>
+
+    <main>
+        <div>
+            <%result.forEach(element => { %>
+            <section>
+                <img src="<%=element.image%>" alt="">
+                <p>name: <%=element.name%></p>
+                <p>Patronus: <%element.patronus%></p>
+                <p>Alive: <%=element.alive%></p>
+                <form action="/addToFav" method="POST">
+                    <input name="charter" type="hidden" value="<%=element.name%>">
+                    <input name="charter" type="hidden" value="<%=element.patronus%>">
+                    <input name="charter" type="hidden" value="<%=element.alive%>">
+                    <button type="submit">SAFE CHARACTER TO DATABASE </button>
+                </form>
+            </section>
+
+
+            <% }); %>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../layout/head.html')%>
+
+</head>
+
+<body>
+    <header>
+        <%- include ('../layout/header.html')%>
+    </header>
+
+    <main>
+        <div>
+            <section>
+                <p>name: <%=element.name%></p>
+                <p>Patronus: <%element.patronus%></p>
+                <p>Alive: <%=element.alive%></p>
+                <form action="/character/<%=element.id%>?_method=PUT" method="POST">
+                        <label for="">Character name</label>
+                        <input type="text" placeholder="<%=element.name%>" name="result">
+                    <label for="">Character patronus</label>
+                    <input type="text" placeholder="<%element.patronus%>" name="result">
+                    <select name="result" id="" >
+                    <option value="True">Alife</option>
+                    <option value="False">Dead</option>
+                </select>
+                    <button type="submit">Update Character </button>
+                </form>
+
+                <form action="/character/<%=element.id%>?_method=DELETE" method="POST">
+                       <button type="submit">Delete Character</button>
+                    </form>
+                </section>
+
+
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>

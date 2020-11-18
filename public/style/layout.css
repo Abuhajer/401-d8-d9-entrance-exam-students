@@ -1,0 +1,22 @@
+section{
+    height: 700px;
+    width: 30%;
+
+}
+
+
+div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+}
+
+ul li {
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}

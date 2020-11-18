@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../layout/head.html')%>
+
+</head>
+
+<body>
+    <header>
+        <%- include ('../layout/header.html')%>
+    </header>
+
+    <main>
+        <div>
+            <section>
+                <form action="/house_name/characters" method="POST">
+                    <button type="submit"> <img src="gryffindor.png" alt=""> </button>
+
+                    <p>gryffindor</p>
+                    <input type="hidden" name="house" value="gryffindor">
+                </form>
+            </section>
+
+            <section>
+                <form action="/house_name/characters" method="POST">
+
+                    <button type="submit"> <img src="hufflepuff.png" alt=""> </button>
+
+                    <p>hufflepuff</p>
+                    <input type="hidden" name="house" value="hufflepuff">
+                </form>
+            </section>
+            <section>
+                <form action="/house_name/characters" method="POST">
+                    <button type="submit"> <img src="ravenclaw.png" alt="">
+                    </button>
+                    <p>ravenclaw</p>
+                    <input type="hidden" name="house" value="ravenclaw">
+                </form>
+            </section>
+            <section>
+                <form action="/house_name/characters" method="POST">
+                    <button type="submit"> <img src="slytherin.png" alt="">
+                    </button>
+                    <p>slytherin </p>
+                    <input type="hidden" name="house" value="slytherin">
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
